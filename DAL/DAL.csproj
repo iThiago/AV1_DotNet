@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALCliente.cs" />
+    <Compile Include="DALItemPedido.cs" />
+    <Compile Include="DALPedido.cs" />
     <Compile Include="DALProduto.cs" />
     <Compile Include="ctx\DBContexto.cs" />
     <Compile Include="Migrations\201605151805363_InitialCreate.cs" />
@@ -67,6 +69,26 @@
     <Compile Include="Migrations\201605152243599_rDecimalprecision.cs" />
     <Compile Include="Migrations\201605152243599_rDecimalprecision.Designer.cs">
       <DependentUpon>201605152243599_rDecimalprecision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606142228180_add1.cs" />
+    <Compile Include="Migrations\201606142228180_add1.Designer.cs">
+      <DependentUpon>201606142228180_add1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606211312504_teste.cs" />
+    <Compile Include="Migrations\201606211312504_teste.Designer.cs">
+      <DependentUpon>201606211312504_teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606211334545_teste1.cs" />
+    <Compile Include="Migrations\201606211334545_teste1.Designer.cs">
+      <DependentUpon>201606211334545_teste1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606211405254_teste2.cs" />
+    <Compile Include="Migrations\201606211405254_teste2.Designer.cs">
+      <DependentUpon>201606211405254_teste2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606211531498_teste3.cs" />
+    <Compile Include="Migrations\201606211531498_teste3.Designer.cs">
+      <DependentUpon>201606211531498_teste3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +123,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605152243599_rDecimalprecision.resx">
       <DependentUpon>201605152243599_rDecimalprecision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606142228180_add1.resx">
+      <DependentUpon>201606142228180_add1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606211312504_teste.resx">
+      <DependentUpon>201606211312504_teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606211334545_teste1.resx">
+      <DependentUpon>201606211334545_teste1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606211405254_teste2.resx">
+      <DependentUpon>201606211405254_teste2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606211531498_teste3.resx">
+      <DependentUpon>201606211531498_teste3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

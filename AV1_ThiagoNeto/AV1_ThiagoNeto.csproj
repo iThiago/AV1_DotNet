@@ -193,8 +193,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarrinhoController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemPedidoController.cs" />
+    <Compile Include="Controllers\PedidoesController.cs" />
     <Compile Include="Controllers\ProdutoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -250,6 +253,16 @@
     <Content Include="Views\Produtoes\Details.cshtml" />
     <Content Include="Views\Produtoes\Edit.cshtml" />
     <Content Include="Views\Produtoes\Index.cshtml" />
+    <Content Include="Views\Pedidoes\Create.cshtml" />
+    <Content Include="Views\Pedidoes\Delete.cshtml" />
+    <Content Include="Views\Pedidoes\Details.cshtml" />
+    <Content Include="Views\Pedidoes\Edit.cshtml" />
+    <Content Include="Views\Pedidoes\Index.cshtml" />
+    <Content Include="Views\ItemPedido\Create.cshtml" />
+    <Content Include="Views\ItemPedido\Delete.cshtml" />
+    <Content Include="Views\ItemPedido\Details.cshtml" />
+    <Content Include="Views\ItemPedido\Edit.cshtml" />
+    <Content Include="Views\ItemPedido\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,6 +283,10 @@
     <ProjectReference Include="..\ClassLibrary1\Model.csproj">
       <Project>{9b585b77-a8be-4363-965c-eb45bd14fb62}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{e7893ec0-cef6-4883-a155-03abe548cb15}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{ed09b4d9-2013-453b-9fa1-a2e8cd4c68ea}</Project>

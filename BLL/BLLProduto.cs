@@ -1,39 +1,41 @@
-﻿//using DAL;
-//using Interfaces;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using DAL;
+using Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using model;
 
-//namespace BLL
-//{
-//    public class BLLProduto : ICrud
-//    {
-//        DALProduto dalProduto = new DALProduto();
-//        public void Atualizar<T>(T t)
-//        {
-//            dalProduto.Atualizar<T>(t);
-//        }
+namespace BLL
+{
+    public class BLLProduto<T> : ICrud<Produto>
+    {
+        DALProduto<T> dalProduto = new DALProduto<T>();
+        
+        public int Inserir(Produto t)
+        {
+            return dalProduto.Inserir(t);
+        }
 
-//        public void Deletar<T>(T t)
-//        {
-//            dalProduto.Deletar<T>(t);
-//        }
+        public void Atualizar(Produto t)
+        {
+            dalProduto.Atualizar(t);
+        }
 
-//        public int Inserir<T>(T t)
-//        {
-//            return dalProduto.Inserir<T>(t);
-//        }
+        public void Deletar(Produto t)
+        {
+            dalProduto.Deletar(t);
+        }
 
-//        public List<T> Listar<T>()
-//        {
-//            return dalProduto.Listar<T>();
-//        }
+        public List<Produto> Listar()
+        {
+            return dalProduto.Listar();
+        }
 
-//        public T ObterPorId<T>(int id)
-//        {
-//            return dalProduto.ObterPorId<T>(id);
-//        }
-//    }
-//}
+        public Produto ObterPorId(int id)
+        {
+            return dalProduto.ObterPorId(id);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+﻿@using model
+@model model.Pedido
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    List<Produto> produtos = (List<Produto>)Session["PRODUTOS"];
+}
+
+<h3>Produtos para Adicionar no Carrinho:</h3>
+
+<table class="table">
+    @foreach (var item in ViewBag.Produtos)
+    {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @item.Preco
+            </td>
+            <td>
+                @Html.ActionLink("AddToCart", "AddToCart", new { idProduto = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+<table class="table">
+    @if (ViewBag.ItensPedido != null)
+    {
+        <h3>Itens do Pedido:</h3>
+        foreach (var item in ViewBag.ItensPedido)
+        {
+            <tr>
+                <td>
+                    @item.Produto.Nome
+                </td>
+                <td>
+                    @item.Quantidade
+                </td>
+                <td>
+                    @(item.Produto.Preco * item.Quantidade)
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<h2>Efetuar Pedido.</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Pedido</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <h4>Cliente:</h4> <br />
+            @Html.DropDownListFor(model => model.ClienteId,(SelectList)ViewBag.Clientes)
+            @Html.HiddenFor(model => model.ClienteId)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@ViewBag.Message
+
+<a href="/Pedidoes/Create" class="btn btn-default" />
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
